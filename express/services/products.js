@@ -6,6 +6,12 @@ const getProducts =  (query)=>{
   return client.getEntries(query)
 }
 
+const getExtraIngredients = (query)=>{
+  query = query || {}
+  query.content_type = 'extras'
+  return client.getEntries(query)
+}
+
 function getProduct (slug, query) {
   query = query || {}
   query['content_type'] = 'product'
@@ -16,5 +22,6 @@ function getProduct (slug, query) {
 
 module.exports = {
   getProducts,
-  getProduct
+  getProduct,
+  getExtraIngredients
 };

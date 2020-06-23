@@ -19,4 +19,22 @@ router.get('/',  (req, res) => {
 
 });
 
+router.get('/extras',  (req, res) => {
+
+  products.getExtraIngredients().then( data => {
+    const items = data.items;
+    const products = items.map(  item =>{
+      let product = item.fields;
+      product.id = item.sys.id;
+      return product;
+
+    });
+    res.json( products )
+  })
+
+
+});
+
+
+
 module.exports = router;
