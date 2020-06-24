@@ -4,7 +4,9 @@ This repository contains the files needed for the backend of the Coffee App
 Netlify is being used to run the LAMBDA functions and Contentful to manage and host the content.
 
 Demo URL:
-https://coffeappbackend.netlify.app/.netlify/functions
+
+Get products ( types of coffees )https://coffeappbackend.netlify.app/.netlify/functions/server
+Get ingredietns https://coffeappbackend.netlify.app/.netlify/functions/server/extras
 
 ### Dependencies
 Netlify as a serverless service
